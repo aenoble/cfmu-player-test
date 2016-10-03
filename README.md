@@ -8,7 +8,7 @@ Step 1:
 $: git clone https://github.com/aenoble/cfmu-player-test.git
 ```
 Step 2:
-Open index.html in web browser
+Open a *.html in web browser
 
 
 ## Issues
