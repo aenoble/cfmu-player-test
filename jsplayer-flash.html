@@ -63,47 +63,19 @@
 
     <script>
         $('#cfmu-player').jPlayer({
-          'ready': function (event) {
+          'ready' : function(e) {
             $('#cfmu-player').jPlayer("setMedia", {
-              //Random KPOP livestream.
-              m4a: "http://cfmu.dev/test.mp3"
+              mp3: "http://cfmu.dev/test.mp3"
             });
           },
-          'preload': "metadta",
-          'supplied': "mp3, m4a",
+          'swfPath': "https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/",
+          'supplied': "mp3",
+          'preload': "metadata",
           'errorAlerts': true,
-          'solution': 'html'
+          'oggSupport': false,
+          'nativeSupport': false,
+          'solution': 'flash, html'
         });
-
-        // Click handlers for buttons
-        $('#livestream').click(function(e){
-          $('#cfmu-player').jPlayer("setMedia", {
-            mp3: "http://173.192.105.231:7316/Live?icy=http"
-          });
-          $('#cfmu-player').jPlayer("play");
-        });
-
-        $('#track1').click(function(e){
-          $('#cfmu-player').jPlayer("setMedia", {
-            m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a"
-          });
-          $('#cfmu-player').jPlayer("play");
-        });
-
-        $('#track2').click(function(e){
-          $('#cfmu-player').jPlayer("setMedia", {
-            mp3: "http://130.113.30.61/cfmucast.php?startyear=2016&startmonth=09&startday=30&starthour=14&startminute=00&endyear=2016&endmonth=09&endday=30&endhour=15&endminute=00&key=eae6fa9f706f784a2c58fbd41a65c8b5"
-          });
-          $('#cfmu-player').jPlayer("play");
-        });
-
-        $('#track3').click(function(e){
-          $('#cfmu-player').jPlayer("setMedia", {
-            mp3: "http://130.113.30.61/cfmucast.php?startyear=2016&startmonth=09&startday=30&starthour=13&startminute=30&endyear=2016&endmonth=09&endday=30&endhour=14&endminute=00&key=e874835a00d51ba8b899c41998842387"
-          });
-          $('#cfmu-player').jPlayer("play");
-        });
-
     </script>
   </body>
 </html>
