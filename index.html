@@ -65,8 +65,8 @@
         $('#cfmu-player').jPlayer({
           'ready': function (event) {
             $('#cfmu-player').jPlayer("setMedia", {
-              //Random KPOP livestream.
-              m4a: "http://cfmu.dev/test.mp3"
+              //livestream.
+              mp3: "http://173.192.105.231:7316/Live?icy=http"
             });
           },
           'preload': "metadta",
@@ -78,6 +78,7 @@
         // Click handlers for buttons
         $('#livestream').click(function(e){
           $('#cfmu-player').jPlayer("setMedia", {
+            //livestream.
             mp3: "http://173.192.105.231:7316/Live?icy=http"
           });
           $('#cfmu-player').jPlayer("play");
